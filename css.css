@@ -1,0 +1,490 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: radial-gradient(
+    ellipse at center,
+    rgba(222, 239, 255, 1) 0%,
+    rgba(152, 190, 222, 1) 100%
+  );
+  --hd-color: linear-gradient(
+    to right,
+    rgba(254, 252, 234, 1) 0%,
+    rgba(241, 218, 54, 1) 100%
+  );
+  --pink-color: #f28a80;
+  --text-color: #3f4c6b;
+  --green: #299a0b;
+  --red-font: #dc1009;
+  --background-two: #101211;
+}
+
+body {
+  width: 100%;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  background: var(--main-bg-color);
+}
+h1,
+h2 {
+  font-family: "Abril Fatface", serif;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover {
+  background-color: #865959;
+  color: #fff;
+  outline: solid 1px red;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+}
+#header {
+  width: 100%;
+  min-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--hd-color);
+  border-bottom: 2px solid var(--pink-color);
+  display: flex;
+}
+
+.logo {
+  padding: 10px 5px;
+  flex: 1;
+}
+#header-img {
+  max-width: 60px;
+  height: 60px;
+}
+.logo h1 {
+  color: var(--red-font);
+  padding: 2px;
+  display: inline-block;
+}
+.logo span {
+  color: var(--green);
+}
+#nav-bar {
+  display: flex;
+  flex: 1;
+}
+
+#nav-bar > ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nav-link {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 4px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: url(https://cdn.pixabay.com/photo/2016/08/02/23/14/tomato-1565367_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+
+#Features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1; /* to make the boxes have equal size*/
+  margin: 20px 5px;
+}
+.box1,
+.box2,
+.box3 {
+  width: 35%;
+  height: 300px;
+  background: var(--main-bg-color);
+  display: flex;
+  padding: 40px 5px 0 5px;
+  margin: 5px;
+  border: 5px solid var(--pink-color);
+  border-radius: 10px;
+}
+.fa-pepper-hot,
+.fa-truck,
+.fa-heart {
+  position: relative;
+  left: 50%;
+  bottom: 10%;
+}
+.fa-ul {
+  padding: 10px 2px 0 2px;
+  margin-top: 2px;
+}
+.box1 li,
+.box2 li,
+.box3 li {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  padding: 2px;
+}
+.box1 li span {
+  color: var(--red-font);
+  font-weight: bold;
+}
+#How_It_Works {
+  width: 50%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  background: var(--main-bg-color);
+  border: 3px dotted var(--pink-color);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 0 auto;
+}
+#video > iframe {
+  width: 400px;
+  height: 315px;
+  border: 0;
+  box-shadow: 20px 20px 50px 10px var(--green);
+  border-radius: 5px;
+}
+#Pricing {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.pricing-card {
+  background: var(--hd-color);
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  align-items: center;
+  padding: 12px;
+  margin: 10px;
+  border: 2px solid var(--pink-color);
+  border-radius: 10px;
+}
+.pricing-card img {
+  max-width: 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.description {
+  text-align: center;
+}
+
+.description h4 {
+  color: var(--red-font);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.description button {
+  width: 100px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+  background: var(--main-bg-color);
+  border: 3px solid var(--pink-color);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.description button:hover {
+  opacity: 0.6;
+}
+.pricing-card:last-child :last-child {
+  margin-top: 5px;
+}
+
+.form-fill {
+  width: 80%;
+  height: 180px;
+  background: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+#form {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+#form > h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 20px 8px;
+}
+#form > input {
+  display: block;
+  padding: 10px 2px;
+  text-align: center;
+  border-radius: 10px;
+}
+#email {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+input[type="submit"] {
+  width: 120px;
+  margin: 10px 40px;
+  background: var(--background-two);
+  border: 3px dotted var(--pink-color);
+  cursor: pointer;
+}
+#submit {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+input[type="submit"]:hover {
+  opacity: 0.8;
+  background-color: var(--pink-color);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: #f8cf56;
+  display: block;
+  margin-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  background: var(--main-bg-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 15px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 3px 2px var(--green);
+}
+footer li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-right: 30px;
+}
+footer div {
+  text-align: center;
+  padding: 3px;
+  margin-bottom: 8px;
+}
+footer p {
+  color: var(--text-color);
+  font-size: 1.07rem;
+  line-height: 1;
+  word-spacing: 1px;
+}
+#spr-span {
+  color: var(--red-font);
+  font-weight: bold;
+}
+
+#spg-span {
+  color: var(--green);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    display: flex;
+    height: 80px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  #nav-bar > ul {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    color: var(--red-font);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 6px;
+  }
+  .main-container {
+    display: flex;
+  }
+  #Features {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #Features div {
+    height: 200px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .box1 {
+    order: 1;
+    width: 90%;
+  }
+  .box2 {
+    order: 2;
+    width: 90%;
+    margin-right: 15px;
+  }
+  .box3 {
+    order: 3;
+    width: 90%;
+    margin-right: 15px;
+  }
+  #Features li {
+    font-size: 0.8rem;
+  }
+  #How_It_Works {
+    width: 70%;
+    display: flex;
+  }
+  #video > iframe {
+    width: 300px;
+    height: 350px;
+  }
+  .pricing-card {
+    width: 40%;
+    display: flex;
+    flex: 1;
+  }
+  .description h4{
+      font-size: 0.9rem;
+  }
+  .description p{
+      font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .fa-pepper-hot,
+  .fa-truck,
+  .fa-heart {
+  position: relative;
+  left: 45%;
+  bottom: 20%;
+}
+.fa-ul {
+  padding: 5px 2px 0 2px;
+  margin-top: 2px;
+}
+  #Features li {
+    font-size: 0.7rem;
+  }
+
+  #How_It_Works {
+    width: 90%;
+    display: flex;
+    flex: 1;
+  }
+  #video > iframe {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .pricing-card {
+    width: 40%;
+    display: flex;
+    flex: 1;
+  }
+  .pricing-card img {
+    max-width: 100px;
+  }
+  #form > h2 {
+    font-size: 1.2rem;
+  }
+  
+  input[type="email"], input[type="submit"]{
+    margin: 5px auto;
+  }
+  #email{
+    font-size: 0.8rem;
+  }
+  #submit{
+    font-size: 1rem;
+  }
+  footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-shrink: 1;
+  }
+  footer li {
+    font-size: 0.7rem;
+  }
+  footer p {
+    font-size: 0.6rem;
+  }
+}
